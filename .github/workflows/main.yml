@@ -32,7 +32,7 @@ jobs:
           - name: 'Make entrypoint.sh executable'
             working-directory: ./wine/latest/
             run: |
-              chmod +x entrypoint.sh
+              chmod +x ../entrypoint.sh
 
           - name: 'Build Inventory Image'
             working-directory: ./wine/latest/
