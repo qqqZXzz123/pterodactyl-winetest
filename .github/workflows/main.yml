@@ -30,12 +30,12 @@ jobs:
               password: ${{secrets.GITHUB_TOKEN}}
               
           - name: 'Make entrypoint.sh executable'
-            working-directory: ./wine/
+            working-directory: ./wine/latest/
             run: |
               chmod +x entrypoint.sh
 
           - name: 'Build Inventory Image'
-            working-directory: ./wine/
+            working-directory: ./wine/latest/
             run: |
               docker build . --tag ghcr.io/qqqzxzz123/pterodactyl-winetest:latest
               docker push ghcr.io/qqqzxzz123/pterodactyl-winetest:latest
